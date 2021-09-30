@@ -61,14 +61,14 @@ import com.mindtree.utility.screenshot;
 		public void signup() throws Exception {
 			
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			hp.username().sendKeys("ka12q2jhf7@gmail.com");
+			hp.username().sendKeys("aqws12jhf7@gmail.com");
 			hp.password().sendKeys("demo1234");
 			hp.loginbutton().click();
 			log.info("signup successful");
 			String temp=screenshot.takeSnapShot(driver);
-			ExtentTest logger=extent.createTest(log.getName());
+			ExtentTest logger=extent.createTest("Signup");
 			logger.addScreenCaptureFromPath(temp);
-			logger.log(Status.INFO, log.getName());
+			logger.log(Status.INFO, "Signup");
 			extent.flush();
 			
 			
@@ -85,9 +85,9 @@ import com.mindtree.utility.screenshot;
 			hp.updateButton().click();
 			log.info("details update successfull");
 			String temp=screenshot.takeSnapShot(driver);
-			ExtentTest logger=extent.createTest(log.getName());
+			ExtentTest logger=extent.createTest("details update");
 			logger.addScreenCaptureFromPath(temp);
-			logger.log(Status.INFO, log.getName());
+			logger.log(Status.INFO, "details update");
 			extent.flush();
 
 			}
@@ -99,9 +99,9 @@ import com.mindtree.utility.screenshot;
 				System.out.println(hp.storeAddress().getText());
 				log.info("store found");
 				String temp=screenshot.takeSnapShot(driver);
-				ExtentTest logger=extent.createTest(log.getName());
+				ExtentTest logger=extent.createTest("Store locator");
 				logger.addScreenCaptureFromPath(temp);
-				logger.log(Status.INFO, log.getName());
+				logger.log(Status.INFO, "Store locator");
 				extent.flush();
 
 			}
@@ -111,9 +111,9 @@ import com.mindtree.utility.screenshot;
 				  hp.viewCustomerstories().click();
 				  log.info("customer stories opened successfully");
 					String temp=screenshot.takeSnapShot(driver);
-					ExtentTest logger=extent.createTest(log.getName());
+					ExtentTest logger=extent.createTest("Customer Stories");
 					logger.addScreenCaptureFromPath(temp);
-					logger.log(Status.INFO, log.getName());
+					logger.log(Status.INFO,"Customer Stories");
 					extent.flush();
 			}
 			@Test(priority =4)
@@ -121,9 +121,9 @@ import com.mindtree.utility.screenshot;
 				hp.aboutUs().click();
 				log.info("About company loaded successfully");
 				String temp=screenshot.takeSnapShot(driver);
-				ExtentTest logger=extent.createTest(log.getName());
+				ExtentTest logger=extent.createTest("About company");
 				logger.addScreenCaptureFromPath(temp);
-				logger.log(Status.INFO, log.getName());
+				logger.log(Status.INFO, "About company");
 				extent.flush();
 				
 			}
@@ -138,9 +138,9 @@ import com.mindtree.utility.screenshot;
 				a.moveToElement(option).click().build().perform();
 				log.info("Search is working fine");
 				String temp=screenshot.takeSnapShot(driver);
-				ExtentTest logger=extent.createTest(log.getName());
+				ExtentTest logger=extent.createTest("Search box");
 				logger.addScreenCaptureFromPath(temp);
-				logger.log(Status.INFO, log.getName());
+				logger.log(Status.INFO, "Search box");
 				extent.flush();
 				
 			}
@@ -153,9 +153,9 @@ import com.mindtree.utility.screenshot;
 			    hp.addToCart().click();		
 			    log.info("Add cart wortking as expected");
 				String temp=screenshot.takeSnapShot(driver);
-				ExtentTest logger=extent.createTest(log.getName());
+				ExtentTest logger=extent.createTest("Add to cart");
 				logger.addScreenCaptureFromPath(temp);
-				logger.log(Status.INFO, log.getName());
+				logger.log(Status.INFO, "Add to cart");
 				extent.flush();
 			}
 			@Test(priority =7)
@@ -166,9 +166,9 @@ import com.mindtree.utility.screenshot;
 				hp.Logo().click();
 				log.info("EMI options displayed");
 				String temp=screenshot.takeSnapShot(driver);
-				ExtentTest logger=extent.createTest(log.getName());
+				ExtentTest logger=extent.createTest("EMI");
 				logger.addScreenCaptureFromPath(temp);
-				logger.log(Status.INFO, log.getName());
+				logger.log(Status.INFO, "EMI");
 				extent.flush();
 			}
 			@Test(priority =8)
@@ -177,9 +177,9 @@ import com.mindtree.utility.screenshot;
 				hp.subscribeButton().click();
 				log.info(log);
 				String temp=screenshot.takeSnapShot(driver);
-				ExtentTest logger=extent.createTest(log.getName());
+				ExtentTest logger=extent.createTest("Giveaway");
 				logger.addScreenCaptureFromPath(temp);
-				logger.log(Status.INFO, log.getName());
+				logger.log(Status.INFO, "Giveaway");
 				extent.flush();
 			}
 			
@@ -189,9 +189,9 @@ import com.mindtree.utility.screenshot;
 				hp.logoutButton().click();
 				log.info("Logout done");
 				String temp=screenshot.takeSnapShot(driver);
-				ExtentTest logger=extent.createTest(log.getName());
+				ExtentTest logger=extent.createTest("Logout");
 				logger.addScreenCaptureFromPath(temp);
-				logger.log(Status.INFO, log.getName());
+				logger.log(Status.INFO, "Logout");
 				extent.flush();
 
 				}

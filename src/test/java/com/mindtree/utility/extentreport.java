@@ -5,11 +5,10 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 public class extentreport {
 	ExtentReports extent;
-		public String extentreport() {
+		public extentreport() {
 			String path = "Reports\\report.html";
 			ExtentHtmlReporter reporter = new ExtentHtmlReporter(path);
 			extent = new ExtentReports();
 			extent.attachReporter(reporter);
-			return path;
 		}
 	}
